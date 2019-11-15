@@ -14,8 +14,4 @@ class RingBuffer:
         
 
   def get(self):
-    if self.capacity = 0:
-        print('[]')
-    else:
-        while x > self.capacity:
-         print(self.storage[x])
+    print(buffer)
