@@ -1,17 +1,27 @@
 class RingBuffer:
-  def __init__(self, capacity):
-    self.capacity = capacity
-    self.current = 0
-    self.storage = [None]*capacity
+    def __init__(self, capacity):
+        self.capacity = capacity 
+        self.current = 0
+        self.storage = [None]*capacity
 
-  def append(self, item):
-
-    if self.capacity == self.current:
-        self.current = 1
-    else:
-        self.current += 1
-    self.storage[current - 1] = item
+    def append(self, item):
+        if self.capacity > self.current:
+            self.storage[self.current] = item
+            self.current += 1
+        else:
+            self.current = 0
+            self.storage[self.current] = item
+            self.current += 1
+    
+    def get(self):
+        return [x for x in self.storage if x != None]
         
 
-  def get(self):
-    print(buffer)
+
+'''
+    def append(self, item):
+        if self.capacity == self.current + 1:
+            self.current = 0
+        self.storage[self.current] = item
+        self.current += 1
+'''

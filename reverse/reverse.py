@@ -42,6 +42,11 @@ class LinkedList:
     # if we've gotten here, then the target node isn't in our list
     return False
 
+
+#list can be empty
+#list can be one item
   def reverse_list(self):
-    # TO BE COMPLETED
-    pass
+        
+        if self.head is None or self.get_next() is None:
+            
+   
