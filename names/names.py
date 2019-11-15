@@ -27,20 +27,20 @@ for name_1 in names_1:
 #approx 0.004 seconds
 #best by far
 
-duplicates = frozenset(names_1).intersection(names_2)
+#duplicates = frozenset(names_1).intersection(names_2)
 
 
 #same runtime no intersection code
 
 #this is most intuitive make list of one, run through list 1 get values, check all values as running through list 2
 #approx 1.6 seconds
-'''
+
 duplicates = []
 for name_1 in names_1:
     if name_1 in names_2:
         duplicates.append(name_1)
 
-'''
+
 
 print(f"{len(duplicates)} duplicates:\n\n{duplicates}")
 end_time = time.time()
